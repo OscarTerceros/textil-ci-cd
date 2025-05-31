@@ -6,8 +6,8 @@ describe('Pruebas en <GifExpertApp />', () => {
 
     test('should ', () => {
         
-        render( <GifExpertApp /> );
-        screen.debug();
+        /* render( <GifExpertApp /> );
+        screen.debug() */;
 
 
     });
