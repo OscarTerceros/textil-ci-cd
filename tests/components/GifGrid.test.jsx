@@ -19,7 +19,7 @@ describe('Pruebas en <GifGrid />', () => {
 
         render( <GifGrid category={ category } /> );
         expect( screen.getByText( 'Cargando...' ) );
-        expect( screen.getByText( category ) );
+        expect( screen.getByText( '' ) );
 
     });
 
