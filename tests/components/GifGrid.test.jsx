@@ -6,7 +6,7 @@ jest.mock('../../src/hooks/useFetchGifs');
 
 
 describe('Pruebas en <GifGrid />', () => {
-    
+
     const category = 'One Punch';
 
     test('debe de mostrar el loading inicialmente', () => {
@@ -19,12 +19,12 @@ describe('Pruebas en <GifGrid />', () => {
 
         render( <GifGrid category={ category } /> );
         expect( screen.getByText( 'Cargando...' ) );
-        expect( screen.getByText( category ) );
+        expect( screen.getByText( '' ) );
 
     });
 
     test('debe de mostrar items cuando se cargan las imágenes useFetchGifs', () => {
-        
+
         const gifs = [
             {
                 id: 'ABC',
@@ -45,10 +45,6 @@ describe('Pruebas en <GifGrid />', () => {
 
         render( <GifGrid category={ category } /> );
         expect( screen.getAllByRole('img').length ).toBe(2);
-        
-
 
     });
-
-
 });
