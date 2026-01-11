@@ -36,12 +36,12 @@ pipeline {
             steps {
                 script {
                     // Detener y eliminar contenedor si ya existe
-                    sh '''
+                    sh """
                     docker stop ${CONTAINER_NAME} || true
                     docker rm ${CONTAINER_NAME} || true
                     docker build -t ${DOCKER_IMAGE} .
                     docker run -d --name ${CONTAINER_NAME} -p 3000:3000 ${DOCKER_IMAGE}
-                    '''
+                    """
                 }
             }
         }
